@@ -34,3 +34,43 @@ body {
 .clear:hover {
     background: rgb(170, 170, 170);
 }
+
+.clear:active {
+    background: white;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.resizer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.resizer button {
+    background: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: larger;
+}
+
+.resizer button:hover {
+    background: rgb(170, 170, 170);
+}
+
+.resizer button:active {
+    background: white;
+}
+
+.resizer div {
+    font-weight: bold;
+}
+
+.current {
+    background: purple;
+}
