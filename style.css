@@ -13,7 +13,6 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 100px;
 }
 
  .square {
@@ -22,4 +21,16 @@ body {
 
 .grey-square {
     background: grey;
+}
+
+.clear {
+    background: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: larger;
+}
+
+.clear:hover {
+    background: rgb(170, 170, 170);
 }

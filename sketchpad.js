@@ -23,10 +23,10 @@ const clearBtn = document.querySelector('.clear');
 clearBtn.addEventListener('click', resetPad);
 
 function resetPad(){
-    console.log("reset");
+    const greySquare = document.querySelectorAll('.grey-square');
+
+    for(let i = 0; i < greySquare.length; i++)
+    {
+        greySquare[i].classList.remove('grey-square');
+    }
 }
-
-/* const square = document.querySelector('.square');
-console.log(square);
-
-square.classList.add('grey-square'); */
