@@ -28,20 +28,53 @@ function resetPad() {
 }
 
 
-//set resize buttons change dimensions of pad squares
+//resize buttons to change dimensions of pad squares
+//and current size toggle
 const smallBtn = document.querySelector('#small');
 smallBtn.onclick = () => {
-    newPad(100);
+    if (currentBtn != smallBtn) {
+        newPad(100);
+        currentBtn.classList.toggle('current');
+        smallBtn.classList.toggle('current')
+        currentBtn = smallBtn;
+    }
 }
 
 const mediumBtn = document.querySelector('#medium');
-mediumBtn.onclick = () => newPad(50);
+let currentBtn = mediumBtn;
+mediumBtn.onclick = () => {
+    if (currentBtn != mediumBtn) {
+        newPad(50);
+        currentBtn.classList.toggle('current');
+        mediumBtn.classList.toggle('current')
+        currentBtn = mediumBtn;
+    }
+}
 
 const largeBtn = document.querySelector('#large');
-largeBtn.onclick = () => newPad(25);
+largeBtn.onclick = () => {
+    if (currentBtn != largeBtn) {
+        newPad(25);
+        currentBtn.classList.toggle('current');
+        largeBtn.classList.toggle('current')
+        currentBtn = largeBtn;
+    }
+}
 
 const hugeBtn = document.querySelector('#huge');
-hugeBtn.onclick = () => newPad(10);
+hugeBtn.onclick = () => {
+    if (currentBtn != hugeBtn) {
+        newPad(10);
+        currentBtn.classList.toggle('current');
+        hugeBtn.classList.toggle('current')
+        currentBtn = hugeBtn;
+    }
+}
+
+function setCurrent() {
+    currentBtn.classList.remove('current');
+
+}
 
 
 //remove old squares, sets new dimensions, add new squares
@@ -51,12 +84,12 @@ function newPad(newDim) {
     addSquares();
 }
 
-function addSquares () {
+function addSquares() {
     for (let i = 0; i < dim * dim; i++) {
         const div = document.createElement('div');
         div.classList.add('square');
         div.addEventListener('mouseenter', () => {
-            div.classList.toggle('grey-square');
+            div.classList.add('grey-square');
         })
 
         div.style.width = `${width}px`;
