@@ -2,4 +2,4 @@
 
 Simple interactive Etch-a-sketch webpage.
 
-https://drewtempleton1.github.io/sketchpad/
+https://drewtempl.github.io/sketchpad/
