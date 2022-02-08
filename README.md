@@ -1,5 +1,5 @@
 # sketchpad
 
-Simple interactive Etch-a-sketch webpage.
+Interactive Etch-a-sketch webpage.
 
 https://drewtempl.github.io/sketchpad/
